@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Información del Pedido</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ver-base.css') }}">
+    </head>
+    <body>
+        <div id="desplegar-info">
+            <p class="titulo">Información del Pedido</p>
+            <p class="bajada">Tipo:</p>
+            <p class="texto">{{ datos[0].tipo }}</p>
+            <br><br>
+            <p class="bajada">Producto(s):</p>
+            <p class="texto">{{ datos[0].opciones_fv }}</p>
+            <br><br>
+            <p class="bajada">Región:</p>
+            <p class="texto">{{ datos[0].region }}</p>
+            <br><br>
+            <p class="bajada">Comuna:</p>
+            <p class="texto">{{ datos[0].comuna }}</p>
+            <br><br>
+            <p class="bajada">Descripción:</p>
+            <p class="texto">{{ datos[0].descripcion }}</p>
+            <br><br>
+            <p class="bajada">Nombre del Comprador:</p>
+            <p class="texto">{{ datos[0].nombre }}</p>
+            <br><br>
+            <p class="bajada">Email del Comprador:</p>
+            <p class="texto">{{ datos[0].email }}</p>
+            <br><br>
+            <p class="bajada">Celular del Comprador:</p>
+            <p class="texto">{{ datos[0].celular }}</p>
+        </div>
+    </body>
+</html>

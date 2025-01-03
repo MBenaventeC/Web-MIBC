@@ -1,0 +1,86 @@
+{% extends 'auth/base.html' %}
+{% block title %} Agregar Pedido {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="logo">
+        <img id="logo-id" src="{{url_for('static', filename='png/Logo_500px.png')}}" alt="Logo">
+        <p class="titulo">Formulario para Agregar Pedido</p>
+    </div>
+    <a href="{{ url_for('index') }}" class="boton">Volver al menú</a><br><br>
+    <form class="formulario" id="agregar-pedido-form" action="{{url_for('agregar_pedido')}}" enctype="multipart/form-data">
+        <div class="seleccion">
+            <label for="fv-formulario">Seleccione Frutas o Verduras:</label>
+            <select id="fv-formulario" name="fv-formulario" onchange="opcSegunFV()" required>
+                <option value="">Escoja una opción</option>
+                <option value="frutas">Frutas</option>
+                <option value="verduras">Verduras</option>
+            </select>
+        </div>
+        <div class="botones">
+            <button type="button" class="uno-suma" id="mas-uno">
+                +1 Fruta/Verdura
+            </button>
+            <button type="button" class="uno-resta" id="menos-uno">
+                -1 Fruta/Verdura
+            </button>
+        </div>
+        <div id="fv-cant-input"> 
+        </div>
+        <div id="log-fv-cant-input">
+        </div>
+        <div id="desc-input" class="grupo-input">
+            <label for="descripcion" class="grupo-input">Descripción (Opcional)</label>
+            <textarea id="descripcion" name="descripcion" rows="4" cols="48" class="descripcion" style="resize: none;"></textarea>
+        </div>
+        <div class="seleccion">
+            <label for="region-formulario">Región</label>
+            <select id="region-formulario" name="region-formulario" onchange="comunaSegunRegion()" required>
+                <option value="">Escoja una región</option>
+                <option value="arica-parinacota">Región de Arica y Parinacota</option>
+                <option value="tarapaca">Región de Tarapacá</option>
+                <option value="antofagasta">Región de Antofagasta</option>
+                <option value="atacama">Región de Atacama</option>
+                <option value="coquimbo">Región de Coquimbo</option>
+                <option value="valparaiso">Región de Valparaíso</option>
+                <option value="metropolitana">Región Metropolitana de Santiago</option>
+                <option value="libertador-ohiggins">Región del Libertador Gral. Bernardo O'Higgins</option>
+                <option value="maule">Región del Maule</option>
+                <option value="nuble">Región de Ñuble</option>
+                <option value="biobio">Región del Biobío</option>
+                <option value="araucania">Región de La Araucanía</option>
+                <option value="rios">Región de Los Ríos</option>
+                <option value="lagos">Región de Los Lagos</option>
+                <option value="aysen">Región Aysén del G. Carlos Ibañez del Campo</option>
+                <option value="magallanes">Región de Magallanes y de la Antártica Chilena</option>
+            </select>
+        </div>
+        <div class="seleccion">
+            <label for="comuna-formulario">Comuna</label>
+            <select id="comuna-formulario" name="comuna-formulario">
+            </select>
+        </div>
+        <div id="nombre-input" class="grupo-input">
+            <label for="nombre-formulario">Nombre y Apellido del Comprador</label>
+            <input id="nombre-formulario" name="nombre-formulario" class="input-normal" type="text" required>
+        </div>
+        <div id="correo-input" class="grupo-input">
+            <label for="correo-formulario">Correo Electrónico del Comprador</label>
+            <input id="correo-formulario" name="correo-formulario" class="input-normal" type="email" required>
+        </div>
+        <div id="numero-input" class="grupo-input">
+            <label for="numero-formulario">Número de Celular del Comprador (Opcional)</label>
+            <input id="numero-formulario" name="numero-formulario" class="input-normal" type="text" required>
+        </div>
+        <div class="botones">
+            <button type="button" class="envio" id="envio-formulario">
+                Agregar Producto(s)
+            </button>
+        </div>
+    </form>
+    <div id="post-formulario">
+    </div>
+</div>
+{% endblock %}
+{% block javascript %}
+<!-- <script lang="javascript" src="{{ url_for('static', filename='js/agregar-pedido.js') }}"></script> -->
+{% endblock %}

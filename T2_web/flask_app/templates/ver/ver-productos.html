@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenido</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ver-productos.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <img id="logo-id" src="{{url_for('static', filename='png/Logo_500px.png')}}" alt="Logo">
+                <p class="titulo">Ver Productos</p>
+            </div>
+            <a href="{{ url_for('index') }}" class="volver">Volver al menú</a><br><br>
+            <table class="tabla-productos">
+                <thead> 
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Producto(s)</th>
+                        <th>Región</th>
+                        <th>Comuna</th>
+                        <th>Fotos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="fila1">
+                        <td>Frutas</td>
+                        <td>Cereza, Frambuesa, Frutilla, Naranja, Uva</td>
+                        <td>Región Metropolitana</td>
+                        <td>Huechuraba</td>
+                        <td><img alt="Cereza, Frambuesa, Frutilla, Naranja, Uva, Calidad 120 por 120" src="../jpg/Cereza_Frambuesa_Frutilla_Naranja_Uva_120x120.jpg"></td>
+                    </tr>
+                    <tr id="fila2">
+                        <td>Verduras</td>
+                        <td>Champiñón, Pimiento, Tomate</td>
+                        <td>Región Metropolitana</td>
+                        <td>Providencia</td>
+                        <td><img alt="Champiñón, Pimiento, Tomate, Calidad 120 por 120" src="../jpg/Champinon_Pimiento_Tomate_120x120.jpg"></td>
+                    </tr>
+                    <tr id="fila3">
+                        <td>Frutas</td>
+                        <td>Frambuesa</td>
+                        <td>Región del Maule</td>
+                        <td>Pelluhue</td>
+                        <td><img alt="Frambuesa, Calidad 120 por 120" src="../jpg/Frambuesa_120x120.jpg"></td>
+                    </tr>
+                    <tr id="fila4">
+                        <td>Frutas</td>
+                        <td>Kiwi</td>
+                        <td>Region de Arica y Parinacota</td>
+                        <td>Camarones</td>
+                        <td><img alt="Kiwi, Calidad 120 por 120" src="../jpg/Kiwi_120x120.jpg"></td>
+                    </tr>
+                    <tr id="fila5">
+                        <td>Frutas</td>
+                        <td>Kiwi, Limón, Naranja, Pomelo</td>
+                        <td>Region de Valparaíso</td>
+                        <td>Algarrobo</td>
+                        <td><img alt="Kiwi, Limón, Naranja, Pomelo, Calidad 120 por 120" src="../jpg/Kiwi_Limon_Naranja_Pomelo_120x120.jpg"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="../js/ver-productos.js"></script>
+    </body>
+</html>

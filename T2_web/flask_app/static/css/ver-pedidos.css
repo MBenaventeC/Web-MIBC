@@ -1,0 +1,134 @@
+:root {
+    --color-borde: #555555;
+    --color-fondo: #f0f0f0
+}
+
+html, body {
+    background-color: var(--color-fondo);
+}
+
+.bajada {
+    text-align: center;
+    font-size: 20px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: black;
+}
+
+.container {
+  border: 50px solid #ff6347;
+  box-shadow: 0px 2px 3px #d0cccc,
+              0px 4px 6px #d0cccc,
+              0px 6px 9px #d0cccc,
+              0px 8px 12px #d0cccc;
+  height: 50%;
+  max-width: 700px;
+  margin: 2% auto;
+  padding: 2rem;
+  padding-top: .5rem;
+  text-align: center;
+  background-color: var(--color-fondo);
+}
+
+label {
+    text-align: left;
+    cursor: pointer;
+}
+
+label > input {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.logo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #logo-id {
+    border: 2px solid var(--color-borde);
+    display: block;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.tabla-productos {
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabla-productos thead {
+    height: 40px;
+    background-color: #ffc354;
+}
+
+.tabla-productos tbody {
+    font-family: Helvetica;
+    font-size: 15px;
+}
+
+.tabla-productos tbody tr:hover {
+    background-color: #dddddd;
+}
+
+.tabla-productos tr th:nth-child(1) {
+    width: 100px;
+}
+
+.tabla-productos tr th:nth-child(2) {
+    width: 100px;
+}
+
+.tabla-productos tr th:nth-child(3) {
+    width: 140px;
+}
+
+.tabla-productos tr th:nth-child(4) {
+    width: 120px;
+}
+
+.tabla-productos tr th:nth-child(5) {
+    width: 140px;
+}
+
+.texto {
+    text-align: center;
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: black;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 30px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: black;
+}
+
+.volver {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    background-color: #ffc354;
+    border: 2px solid #ffad14;
+    border-radius: 6px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    max-width: 300px;
+  }
+  
+  .volver:hover {
+    background-color: #ffad14;
+  }

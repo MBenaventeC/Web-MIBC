@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenido</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <img id="logo-id" src="{{ url_for('static', filename='png/Logo_500px.png')}}" alt="Logo">
+                <p class="titulo">Frutas y Verduras</p>
+            </div>
+            <p class="bajada">Seleccione su opción:</p>
+            <a href="{{ url_for('agregar_producto') }}" class="boton">Agregar producto</a>
+            <a href="{{ url_for('ver_productos') }}" class="boton">Ver productos</a>
+            <br><br>
+            <a href="{{ url_for('agregar_pedido') }}" class="boton">Agregar pedido</a>
+            <a href="{{ url_for('ver_pedidos') }}" class="boton">Ver pedidos</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenido</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ver-pedidos.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <img id="logo-id" src="{{url_for('static', filename='png/Logo_500px.png')}}" alt="Logo">
+                <p class="titulo">Ver Pedidos</p>
+            </div>
+            <a href="{{ url_for('index') }}" class="volver">Volver al menú</a><br><br>
+            <table class="tabla-productos">
+                <thead> 
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Producto(s)</th>
+                        <th>Región</th>
+                        <th>Comuna</th>
+                        <th>Nombre Comprador</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="fila1">
+                        <td>Frutas</td>
+                        <td>Frambuesa, Frutilla, Plátano</td>
+                        <td>Región Metropolitana</td>
+                        <td>Huechuraba</td>
+                        <td>Lalo Landa</td>
+                    </tr>
+                    <tr id="fila2">
+                        <td>Frutas</td>
+                        <td>Arándano, Frambuesa, Cereza</td>
+                        <td>Región Metropolitana</td>
+                        <td>Providencia</td>
+                        <td>Nicolás Silva</td>
+                    </tr>
+                    <tr id="fila3">
+                        <td>Verduras</td>
+                        <td>Acelga, Apio, Cebolla, Papa, Zanahoria</td>
+                        <td>Región del Maule</td>
+                        <td>Pelluhue</td>
+                        <td>Andrea Pérez</td>
+                    </tr>
+                    <tr id="fila4">
+                        <td>Frutas</td>
+                        <td>Mandarina</td>
+                        <td>Region de Arica y Parinacota</td>
+                        <td>Camarones</td>
+                        <td>Eduardo Gómez</td>
+                    </tr>
+                    <tr id="fila5">
+                        <td>Verduras</td>
+                        <td>Brócoli, Champiñón, Ajo, Cebolla, Pimiento</td>
+                        <td>Region de Valparaíso</td>
+                        <td>Algarrobo</td>
+                        <td>Jaime Zapata</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="../js/ver-pedidos.js"></script>
+    </body>
+</html>

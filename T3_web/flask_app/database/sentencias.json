@@ -1,0 +1,19 @@
+{
+    "insertar_producto": "INSERT INTO producto (tipo, descripcion, comuna_id, nombre_productor, email_productor, celular_productor) VALUES (%s, %s, %s, %s, %s, %s);",
+    "insertar_pedido": "INSERT INTO pedido (tipo, descripcion, comuna_id, nombre_comprador, email_comprador, celular_comprador) VALUES (%s, %s, %s, %s, %s, %s);",
+    "list_prod_nuevo_antiguo": "SELECT id, tipo, descripcion, comuna_id, nombre_productor, email_productor, celular_productor FROM producto ORDER BY id DESC;",
+    "comuna_list_prod_nuevo_antiguo": "SELECT PRO.id, PRO.tipo, PRO.descripcion, COM.nombre, PRO.nombre_productor, PRO.email_productor, PRO.celular_productor FROM producto PRO, comuna COM WHERE PRO.comuna_id = COM.id ORDER BY id DESC LIMIT 5, 5;",
+    "insertar_producto_verdura_fruta": "INSERT INTO producto_verdura_fruta (producto_id, tipo_verdura_fruta_id) VALUES (%s, %s);",
+    "insertar_pedido_verdura_fruta": "INSERT INTO pedido_verdura_fruta (tipo_verdura_fruta_id, pedido_id) VALUES (%s, %s);",
+    "tipos_sgn_producto": "SELECT TVF.nombre FROM tipo_verdura_fruta TVF, producto_verdura_fruta PVF WHERE TVF.id=PVF.tipo_verdura_fruta_id AND PVF.producto_id=%s;",
+    "tipos_sgn_pedido": "SELECT TVF.nombre FROM tipo_verdura_fruta TVF, pedido_verdura_fruta PVF WHERE TVF.id=PVF.tipo_verdura_fruta_id AND PVF.pedido_id=%s;",
+    "insertar_foto": "INSERT INTO foto (ruta_archivo, nombre_archivo, producto_id) VALUES (%s, %s, %s);",
+    "fotos_sgn_producto": "SELECT ruta_archivo, nombre_archivo FROM foto WHERE producto_id=%s;",
+    "ultimo_id_insertado": "SELECT LAST_INSERT_ID();",
+    "cant_productos": "SELECT COUNT(id) FROM producto;",
+    "cant_pedidos": "SELECT COUNT(id) FROM pedido;",
+    "max_paginas_prod": "SELECT CEIL(COUNT(id) / 5) FROM producto;",
+    "max_paginas_ped": "SELECT CEIL(COUNT(id) / 5) FROM pedido;",
+    "cant_fv_segun_tipo": "SELECT TVF.nombre, count(*) FROM producto_verdura_fruta PVF, tipo_verdura_fruta TVF WHERE PVF.tipo_verdura_fruta_id = TVF.id GROUP BY TVF.nombre;",
+    "cant_pedidos_segun_comuna": "SELECT CO.nombre, count(*) FROM pedido PE, comuna CO WHERE PE.comuna_id=CO.id GROUP BY PE.comuna_id;"
+}

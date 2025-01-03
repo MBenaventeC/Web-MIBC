@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenido</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/otros-base.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <figure id="grafico1" class="highcharts-figure">
+                <div id="container1"></div>
+                <p class="descripcion">
+                    GRÁFICO 1: Cantidad de cada fruta o verdura en "ver productos", sumada entre productos
+                </p>
+            </figure>
+            <br>
+            <figure id="grafico2" class="highcharts-figure">
+                <div id="container2"></div>
+                <p class="descripcion">
+                    GRÁFICO 2: Veces que se repite cada comuna en "ver pedidos", obtenida acumulativamente
+                </p>
+            </figure>
+        </div>
+    </body>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="{{url_for('static', filename='js/graficos.js')}}"></script>
+</html>

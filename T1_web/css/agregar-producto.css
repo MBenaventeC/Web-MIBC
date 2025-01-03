@@ -1,0 +1,263 @@
+:root {
+  --color-borde: #555555;
+  --color-fondo: #f0f0f0
+}
+
+html, body {
+  background-color: var(--color-fondo);
+}
+
+.bajada {
+  text-align: center;
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: black;
+}
+
+.boton {
+  background-color: #ffc354;
+  border: 2px solid #ffad14;
+  border-radius: 6px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.boton:hover {
+  background-color: #ffad14;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+}
+
+.caja-confirmacion {  
+  background-color: #90d68f;
+  border: 2px solid #6abf69;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.caja-error {
+  background-color: #ff9494;
+  border: 2px solid #ff7171;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.checkbox {
+  text-align: left;
+}
+
+.confirmar {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  background-color: #90d68f;
+  border: 2px solid #6abf69;
+  border-radius: 6px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  max-width: 300px;
+}
+
+.confirmar:hover {
+  background-color: #6abf69;
+}
+
+.container {
+  border: 50px solid #ff6347;
+  box-shadow: 0px 2px 3px #d0cccc,
+              0px 4px 6px #d0cccc,
+              0px 6px 9px #d0cccc,
+              0px 8px 12px #d0cccc;
+  height: 50%;
+  max-width: 700px;
+  margin: 2% auto;
+  padding: 2rem;
+  padding-top: .5rem;
+  text-align: center;
+  background-color: var(--color-fondo);
+}
+
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  resize: none;
+  text-align: left;
+}
+
+.envio {
+  background-color: #90d68f;
+  border: 2px solid #6abf69;
+  border-radius: 6px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.envio:hover {
+  background-color: #6abf69;
+}
+
+#font-boton {
+  text-align: center;
+  font-size: 16px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: black;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+}
+
+.grupo-input {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="file"] {
+  border: 1px solid var(--color-borde);
+  background-color: #fafafa;
+  height: 20px;
+  padding: 9px;
+}
+
+.input-normal {
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  background-color: #fafafa;
+  height: 20px;
+  padding: 9px;
+}
+
+label {
+  text-align: left;
+  cursor: pointer;
+}
+
+label > input {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.logo {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#logo-id {
+  border: 2px solid var(--color-borde);
+  display: block;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seleccion {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 30px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: black;
+}
+
+.uno-suma {
+  margin-left: auto;
+  margin-right: 20px;
+  background-color: #90d68f;
+  border: 2px solid #6abf69;
+  border-radius: 6px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: none;
+  font-size: 12px;
+  width: 160px;
+}
+
+.uno-suma:hover {
+  background-color: #6abf69;
+}
+
+.uno-resta {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff9494;
+  border: 2px solid #ff7171;
+  border-radius: 6px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: none;
+  font-size: 12px;
+  width: 160px;
+}
+
+.uno-resta:hover {
+  background-color: #ff7171;
+}
+
+.volver {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  background-color: #ffc354;
+  border: 2px solid #ffad14;
+  border-radius: 6px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  max-width: 300px;
+}
+
+.volver:hover {
+  background-color: #ffad14;
+}

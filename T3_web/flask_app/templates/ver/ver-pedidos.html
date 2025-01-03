@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenido</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ver-base.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <img id="logo-id" src="{{url_for('static', filename='png/Logo_500px.png')}}" alt="Logo">
+                <p class="titulo">Ver Pedidos</p>
+            </div>
+            <a href="{{ url_for('index') }}" class="volver">Volver al menú</a><br><br>
+            <table class="tabla-productos">
+                <thead> 
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Producto(s)</th>
+                        <th>Región</th>
+                        <th>Comuna</th>
+                        <th>Nombre Comprador</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if datos %}
+                        {% for pedido in datos %}
+                            <tr id="fila{{ pedido.contador }}" onclick="redirectInfo('{{ url_for('informacion_pedido', pedido_id=pedido.id) }}')">
+                                <td>{{ pedido.tipo }}</td>
+                                <td>{{ pedido.opciones_fv }}</td>
+                                <td>{{ pedido.region }}</td>
+                                <td>{{ pedido.comuna }}</td>
+                                <td>{{ pedido.nombre }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+            <div id="paginas">
+                <button class="cambiar-pag" name="ante" id="ante" onclick="redirectInfo('{{ url_for('ver_pedidos', pag=pag-1) }}')">&#60;</button>
+                <p id="index">Página {{ pag if pag else "1" }}/{{ max_pag if max_pag else "1" }}</p>
+                <input type="hidden" name="pagina_actual" value="{{ pag if pag else '1' }}">
+                <button class="cambiar-pag" name="sgte" id="sgte" onclick="redirectInfo('{{ url_for('ver_pedidos', pag=pag+1) }}')">&#62;</button>
+            </div>
+        </div>
+        <script src="{{url_for('static', filename='js/ver-pedidos.js')}}"></script>
+    </body>
+</html>
