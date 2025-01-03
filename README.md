@@ -7,11 +7,11 @@ La asignatura constaba de 5 tareas, donde el promedio de las primeras cuatro det
 Sumado a esto, el promedio eliminaba la peor nota de las 4 tareas iniciales, por lo que fue decisión personal no entregar la Tarea 4.
 
 
-Es por esto que solo hay tres tareas.
+El ramo fue cursado en la primera mitad de 2024.
 
 
-T1 - Tarea 1
+[T1 - Tarea 1](https://github.com/MBenaventeC/Web-MIBC/tree/main/T1_web)
 
-T2 - Tarea 2
+[T2 - Tarea 2](https://github.com/MBenaventeC/Web-MIBC/tree/main/T2_web)
 
-T3 - Tarea 3
+[T3 - Tarea 3](https://github.com/MBenaventeC/Web-MIBC/tree/main/T3_web)
